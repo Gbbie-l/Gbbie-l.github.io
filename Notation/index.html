@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Baby Junior Dev | Rating</title>
+</head>
+<body>
+  <main>
+    <div id="container">
+      <section id="container_form_rating">
+        <div class="contain_star">
+          <img  id="icon_rating" src="./images/icon-star.svg"/>
+        </div>
+        <div>
+          <h1 id="test">How did we do ?</h1>
+          <p> Please let us know we did with you support request. All feeback is appreciated to help us improve our offering !</p>
+        </div>
+        <form>
+          <fieldset class="container_rating">
+            <input type="radio" name="voted" id="rating-1" class="rating_vote" value="1">
+						<label class="num_rating" for="rating-1">1</label>
+						<input type="radio" name="voted" id="rating-2" class="rating_vote" value="2">
+						<label class="num_rating" for="rating-2">2</label>
+						<input type="radio" name="voted" id="rating-3" class="rating_vote" value="3">
+						<label class="num_rating" for="rating-3">3</label>
+						<input type="radio" name="voted" id="rating-4" class="rating_vote" value="4">
+						<label class="num_rating" for="rating-4">4</label>
+						<input type="radio" name="voted" id="rating-5" class="rating_vote" value="5">
+						<label class="num_rating" for="rating-5">5</label>
+          </fieldset>
+          <div class="contain_btn_submit">
+            <button type="submit" id="btn_submit" >Submit</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ========== Section Thank you message ========== -->
+
+    <section class="container_thank hidden">
+      <div>
+        <img id="" src="./images/illustration-thank-you.svg"/>
+      </div>
+      <div class="container_note">
+        <p class="txt_rating">You selected <span id="rating-number"></span> out of 5</p>
+      </div>
+      <div>
+        <h1>Thank you !</h1>
+        <p>
+          We appreciate you taking the time to give a rating.
+          If you ever need more support, don't hesitate to get in touch !
+        </p>
+      </div>
+    </section>
+       
+    </div>
+
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
