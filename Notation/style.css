@@ -149,3 +149,12 @@ input[type="radio"].rating_vote:checked + label {
      width:fit-content ;
 
 }
+
+/*================ Responsive ================*/
+
+@media screen and (max-width: 500px) {
+    main{ 
+        width: 100%; 
+    }
+
+}
