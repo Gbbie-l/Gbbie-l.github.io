@@ -150,7 +150,8 @@ input:checked + .slider:before {
     border-top: 1px solid var(--light-grayish-blue)
 }
 .container-btn{
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 .btn_learn{
     width: 100%;
