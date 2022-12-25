@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import 'reset.css';
+
+:root{
+    --linear-gradient: 0.25turn, hsl(236, 72%, 79%),hsl(237, 63%, 64%);
+    --blue: hsl(237, 63%, 64%);
+    --very-light-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --white: hsl(0, 0%, 100%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+}
+
+body{
+    font-family: 'Montserrat', sans-serif; 
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    color:var(--grayish-blue);
+}
+p{
+    font-size: 15px;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+main{
+    padding-top: 50px;
+    background-color: hls(234, 4%, 98%);
+    background: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top -37px right -195px, bottom left;
+    height: 100vh;
+	width: 100vw; 
+}
+
+.container-cards{
+    display: flex;
+    justify-content:center;
+}
+
+/*------ TOGGLE ------*/
+
+.container-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 60px;
+}
+
+.label{
+    font-size: 14px;
+    color: var(--light-grayish-blue);
+    padding: 0 20px;
+}
+
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color:hsl(235, 100%, 95%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background: linear-gradient(var(--linear-gradient));
+}
+  
+input:focus + .slider {
+    background: linear-gradient(var(--linear-gradient));
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+.card{
+    width: 15rem;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 4px;
+    padding: 10px 25px;
+    box-shadow: 0 1.5rem 1.5rem 0.5rem hsl(237 63% 64% / 0.1);
+    align-self: center;
+}
+
+.card h2{
+    margin: 15px 0px 25px;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+}
+
+.contain-price small{
+    font-size: 25px;
+    color: var(--dark-grayish-blue);
+}
+.price{
+    font-size: 45px;
+    color: var(--dark-grayish-blue);   
+}
+
+.contain-info{
+    padding: 10px;
+    color: var(--dark-grayish-blue);  
+}
+.contain-info li{
+    font-size: 14px;
+    padding: 15px;
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+.contain-info li:nth-child(1){
+    margin-top: 20px;
+    border-top: 1px solid var(--light-grayish-blue)
+}
+.container-btn{
+    margin-top: 20px;
+}
+.btn_learn{
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px 10px;
+    background: linear-gradient(var(--linear-gradient));
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid transparent;
+}
+.btn_learn:hover{
+    background: transparent;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+.hidden{
+    display: none;
+}
+
+/*======== Section pro Offert ========*/
+
+.primary{
+    background: linear-gradient(var(--linear-gradient));
+    color: var(--white) ;
+    z-index: 1;
+    align-self: stretch;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.primary .contain-info li{
+    color: var(--white);
+}
+
+.primary .btn_learn{
+    background: #fff;
+    color: var(--blue);
+}
+
+.primary .btn_learn:hover{
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.primary .contain-price small{
+    color: var(--white);
+}
+
+.primary  .price {
+    color: var(--white);
+}
+
+.primary h2{
+    color: var(--white);
+}
+
+@media (max-width: 700px){
+    .container-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+
+    .primary{
+        align-self: center;
+    }
+
+}
