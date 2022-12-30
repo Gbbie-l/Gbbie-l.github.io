@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+  
+  <title>Baby Junior Dev | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <div class="container_card">
+      <div class="card_front" id="front">
+        <div class="img_card">
+          <img src="./images/bg-card-front.png"/>
+        </div>
+        <div class="container_text_card_front">
+          <img id="logo_card" src="./images/card-logo.svg"/>
+          <p id="text_number_card">0000 0000 0000 0000</p>
+          <div class="containe_name_card">
+            <p id="text_name_card">Baby Junior Dev</p>
+            <p><span id="text_validity_card_MM">00</span>/<span id="text_validity_card_YY">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card_front" id="back">
+        <div class="img_card_back">
+          <img src="./images/bg-card-back.png"/>
+        </div>
+        <div class="container_text_card_back">
+          <p id="text_cvc_card">000</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="container_form">
+      <form action="" method="get" id="form" onsubmit="return errorMessage()" onclick="return errorMessage()">
+        <div class="contain_field">
+          <label for="name_card" required>Cardholder Name</label>
+          <input type="text" id="name_card" placeholder="Baby Junior Dev" required>
+          <p class="error" id="error_name"></p>
+        </div>
+        <div class="contain_field">
+          <label for="card_number">Card Number</label>
+          <input type="text" id="card_number" placeholder="1234 5678 9123 0000" minlength="16" maxlength="16" required>
+          <p class="error" id="error_number_card"></p>
+        </div>
+        <div class="info_validity">
+          <div class="contain_field">
+            <label for="exp_date">Exp. Date (MM/YY)</label>
+            <div class="contain_date">
+                <input type="text" id="MM" aria-labelledby='exp_date' placeholder="MM" minlength="2" maxlength="2" required>       
+                <input type="text" id="YY" aria-labelledby='exp_date' placeholder="YY" minlength="2" maxlength="2" required>
+                <p class="error" id="error_exp_date"></p>
+            </div>
+          </div>
+          <div class="contain_field">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" placeholder="123" minlength="3" maxlength="3" required>
+            <p class="error" id="error_cvc"></p>
+          </div>
+        </div>
+        <div class="container_btn_submit">
+          <button id="btn_submit" type="submit">Confirm</button>
+        </div>
+      </form>
+    </div>
+
+    <section class="container_thank hidden">
+      <div id="container_icon_thank">
+        <img id="icon_thank" src="./images/icon-complete.svg"/>
+      </div>
+
+      <div>
+        <h1 id="thk"> Thank you</h1>
+        <p>
+          We've added your card details 
+        </p>
+        <button id="btn_continue" type="">Continue</button>
+      </div>
+    </section>
+  
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

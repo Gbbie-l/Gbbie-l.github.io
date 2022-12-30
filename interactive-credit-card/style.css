@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
+@import 'minireset.css';
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --red: hsl(0, 100%, 66%);
+    --linear-gradient: 0.25turn, hsl(249, 99%, 64%),hsl(278, 94%, 30%);
+}
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+}
+
+button{
+    border: none;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+main{
+    padding: 20px ;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+	width: 100vw; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/*---------- CARD ----------*/
+#logo_card{
+    margin-bottom: 50px;
+}
+.card_front{
+    position: relative;
+    color: var(--white);
+    text-transform: uppercase;
+}
+#text_number_card{
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.container_text_card_front{
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    padding: 20px;
+    /* width: 100%; */
+}
+.containe_name_card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.container_form{
+    width: 30%;
+}
+
+.img_card_back{
+    margin-left: 5rem;
+    margin-top: 25px;
+}
+
+.container_text_card_back{
+    position: absolute;
+    z-index: 2;
+    top: 45%;
+    right: 10%;
+}
+
+
+/*---------- FORM ----------*/
+.contain_field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.container_form label{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.container_form input{
+    border: 1px solid var(--light-grayish-violet);
+    padding: 7px;
+    border-radius: 5px;
+}
+.container_form input::placeholder {
+    opacity: 0.3;
+}
+
+input:focus{
+    border: 2px solid hsl(249, 99%, 64%);
+    outline: none;
+}
+
+.info_validity{
+    display: flex;
+    justify-content: space-between;
+}
+/* .contain_date{
+    display: flex;
+} */
+.contain_date input{
+    width: 35%;
+}
+.contain_date input:nth-child(1){
+    margin-right: 15px;
+}
+
+/* .container_date_input input{
+    width: 90%;
+} */
+
+.error{
+    font-size: 13px;
+    color: var(--red);
+    letter-spacing: 0;
+    padding-left: 3px;
+    padding-top: 6px;
+}
+
+/*---------- SECTION THANK'S  ----------*/
+.container_thank{
+    text-align: center;
+    width: 30%;
+
+}
+
+#container_icon_thank{
+    margin-bottom: 50px;
+}
+
+.container_thank h1{
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.container_thank p{
+    color: var(--dark-grayish-violet);
+    letter-spacing: 0;
+    font-size: 14px;
+    padding: 10px 0px 60px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/*---------- BUTTON SUBMIT ----------*/
+.container_btn_submit{
+    margin: 35px 0px;
+}
+
+.container_btn_submit button, .container_thank button{
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    width: 100%;
+    padding: 13px 10px;
+    border-radius: 5px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 800px){
+    main{
+        display: block;
+        padding: 0px;
+        /* background-image: url(./images/bg-main-mobile.png); */
+        background-image: none;
+        flex-direction: column;   
+        
+    }
+    .container_form{
+        width: 100%;
+        padding: 50px;
+        
+    }
+
+    .container_card{
+        background-image: url(./images/bg-main-mobile.png);
+        background-size: 100% 80%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #front{
+       z-index: 2;
+        
+    }
+    #back{
+        z-index: 0;
+        margin-bottom: -100px;
+       
+    }
+
+    .container_text_card_back{
+        top: 49%;
+    }
+    
+}
