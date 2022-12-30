@@ -36,7 +36,7 @@ main{
 
 /*---------- CARD ----------*/
 #logo_card{
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 }
 .card_front{
     position: relative;
@@ -184,7 +184,7 @@ input:focus{
     }
     .container_form{
         width: 100%;
-        padding: 50px;
+        padding: 25px;
         
     }
 
@@ -196,19 +196,28 @@ input:focus{
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        padding: 15px;
+    }
+    #logo_card{
+        margin-bottom: 2rem;
     }
     #front{
-       z-index: 2;
-        
+       z-index: 2; 
+       width: 95%;
     }
     #back{
         z-index: 0;
-        margin-bottom: -100px;
-       
+        margin-bottom: -100px; 
     }
-
     .container_text_card_back{
         top: 49%;
     }
-    
+
+    #text_number_card{
+        font-size: 20px;  
+    }
+    .info_validity{
+        display: block;
+    }
+   
 }
