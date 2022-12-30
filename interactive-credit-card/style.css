@@ -177,17 +177,14 @@ input:focus{
     main{
         display: block;
         padding: 0px;
-        /* background-image: url(./images/bg-main-mobile.png); */
         background-image: none;
-        flex-direction: column;   
-        
+        flex-direction: column;       
     }
     .container_form{
         width: 100%;
         padding: 25px;
         
     }
-
     .container_card{
         background-image: url(./images/bg-main-mobile.png);
         background-size: 100% 80%;
@@ -199,25 +196,34 @@ input:focus{
         padding: 15px;
     }
     #logo_card{
-        margin-bottom: 2rem;
+        margin-bottom: 1.3rem;
+        width: 20%;
     }
     #front{
        z-index: 2; 
-       width: 95%;
+       width: 90%;
     }
     #back{
         z-index: 0;
-        margin-bottom: -100px; 
+        margin-bottom: -55px; 
     }
     .container_text_card_back{
         top: 49%;
     }
-
+    .container_text_card_front{
+        bottom: 5px;
+    }
     #text_number_card{
-        font-size: 20px;  
+        font-size: 18px;  
+    }
+    #text_name_card, .text_validity_card_MM{
+        font-size:14px;
     }
     .info_validity{
         display: block;
     }
-   
+    .container_thank{
+        width: 100%;
+        padding: 25px;
+    }
 }
